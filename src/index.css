@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: AvertaPE, sans-serif;
+}
+
+/* Custom-input CSS */
+
+.user-input-wrp {
+	position: relative;
+	width: 100%;
+}
+.user-input-wrp .inputText{
+	color: black; 
+	margin-top: 5px;
+    padding: 20px 10px 10px 10px;
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid black;
+ 	box-shadow: none !important;
+}
+.user-input-wrp .inputText:focus{
+	transition: border-bottom .3s ease-out;
+    border-bottom: 1px solid #1E8479;
+    border: dotted thin black;
+}
+.user-input-wrp .floating-label {
+    color: gray;
+	position: absolute;
+	pointer-events: none;
+	top: 50px;
+	left: 10px;
+	transition: 0.2s ease all;
+}
+
+.user-input-wrp .showpassword {
+	position: absolute;
+	top: 45px;
+	right: 0px;
+	transition: 0.2s ease all;
+}
+.user-input-wrp input:focus ~ .floating-label,
+.user-input-wrp input:not(:focus):valid ~ .floating-label{
+	top: 30px;
+	left: 10px;
+    color: #1E8479;
+	font-size: 13px;
+	opacity: 1;
+}
