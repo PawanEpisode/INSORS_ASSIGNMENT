@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import star from "../assets/star.png";
 import cart from "../assets/cart.png";
 import purchase from "../assets/purchase.png";
@@ -49,18 +50,20 @@ const SignupContainer = () => {
           </div>
           <form className="w-full px-16">
             <fieldset className="w-full mb-5">
-              <button className="w-full bg-white uppercase font-semibold text-lg text-center text-black py-3 
-              hover:scale-y-125 px-20">
-                Register Now
-              </button>
+              <Link to={'/registration'}>
+                <button className="w-full bg-white uppercase font-semibold text-lg text-center text-black py-3 
+                hover:scale-y-125 px-20">
+                  Register Now
+                </button>
+              </Link>
             </fieldset>
-            <div class="w-full">
-              <div class="float-right">
+            <div className="w-full">
+              <div className="float-right">
                 <a
                   id="activateExpAccount"
                   href="/in/en/activation"
                   title="I registered in a store and want to activate my account"
-                  class="underline text-white"
+                  className="underline text-white"
                 >
                   I registered in a store and want to activate my account
                 </a>

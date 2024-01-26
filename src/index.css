@@ -18,6 +18,7 @@
 .user-input-wrp .inputText{
 	color: black; 
 	margin-top: 5px;
+	background-color: #f6f6f6;
     padding: 20px 10px 10px 10px;
 	width: 100%;
 	outline: none;
@@ -47,6 +48,15 @@
 }
 .user-input-wrp input:focus ~ .floating-label,
 .user-input-wrp input:not(:focus):valid ~ .floating-label{
+	top: 30px;
+	left: 10px;
+    color: #1E8479;
+	font-size: 13px;
+	opacity: 1;
+}
+
+.user-input-wrp input[type='email']:focus ~ .floating-label,
+.user-input-wrp input[type='email']:not(:focus):valid ~ .floating-label{
 	top: 30px;
 	left: 10px;
     color: #1E8479;

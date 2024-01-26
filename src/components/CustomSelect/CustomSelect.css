@@ -1,0 +1,40 @@
+.floating-label-container { 
+    width: 100%;
+    position:relative; 
+}
+
+.floating-select {
+    color: black; 
+	margin-top: 5px;
+	background-color: #f6f6f6;
+    padding: 20px 10px 10px 10px;
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid black;
+ 	box-shadow: none !important;
+}
+
+.floating-select:focus {
+    transition: border-bottom .3s ease-out;
+    border-bottom: 1px solid #1E8479;
+    outline: none;
+    border: dotted thin black;
+}
+
+label {
+    color: gray;
+	position: absolute;
+	pointer-events: none;
+	top: 20px;
+	left: 10px;
+	transition: 0.2s ease all;
+}
+
+.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+    top: 5px;
+	left: 10px;
+    color: #1E8479;
+	font-size: 16px;
+	opacity: 1;
+}
